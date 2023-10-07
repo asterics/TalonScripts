@@ -1,14 +1,25 @@
-# TalonScripts
-Some Talon scripts and actions for FlipMouse voice control, see: https://talonvoice.com/ and https://github.com/asterics/FLipMouse
+# TalonScripts for FlipMouse 
+Some Talon scripts which provide voice control for the FlipMouse, see: https://talonvoice.com/ and https://github.com/asterics/FLipMouse
 Basic concepts how the FlipMouse can be controlled via speech commands are demonstrated. 
-(AT commands are sent to the FlipMouse device via PySerial, this could be applied for FABI or FlipPad in similar ways)
 
 ## Installation
-* download and install Talon as described here: https://talonvoice.com/docs/
-* copy (clone) the files in this repository into the Talon user folder
-* install pyserial in the python environment of your Talon installation 
-  (eg. using `\work\talon-windows\venv_bin\pip.bat`)
+* Download and install Talon as described here: https://talonvoice.com/docs/
+* Copy (clone) the files in this repository into the Talon user folder
+* Install pyserial in the python environment of your Talon installation 
+  (`pipTalon.bat install pyserial` can be used under Windows after updating the path to your Talon installation folder in the batch script.)
 
-## Usage
-* on startup, all available COM ports are scanned for a connected FlipMouse - if a Flipmouse device is found, the COM port identified is stored (but the port close again in order to not block it)
-* upon certain voice commands or context switches (change of window focus), AT commands for slot changes are sent of key mappings are changed (see the .talon files)
+## Operation 
+* The .talon files define voice commands and key mappings for different contexts (eg. browsing, editing, gaming) - depending on the focused application window
+* FMActions.py establishes communication to the FlipMouse
+  * On startup, all available serial ports are scanned for a connected FlipMouse - if a Flipmouse device is found, the COM port identified is stored
+  * The port closed immediately after startup, it will only be opened for sending subsequent commands)
+  * AT commands for loading the next configuration slot (or a particular slot) are sent to the FlipMouse device upon voice command or context switch  
+* New voice commands / behaviours can be added on demand, see: https://talon.wiki/unofficial_talon_docs/
+
+
+## Combination of Talon with Eyetracking / Gaze-OCR
+* How to get Tobii trackers working with Talon: https://talon.wiki/tobii_5/
+  * Demo video  Talon + Tobii Gaze Tracker + OptiKey: https://www.youtube.com/watch?v=PQkJE-rtn-g
+* James Stout Blog about Gaze OCR and Talon: https://handsfreecoding.org/
+  * Demo video Gaze OCR: https://www.youtube.com/watch?v=qkFy66WF3bU
+

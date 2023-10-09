@@ -22,4 +22,5 @@ Basic concepts how the FlipMouse can be controlled via speech commands are demon
   * Demo video  Talon + Tobii Gaze Tracker + OptiKey: https://www.youtube.com/watch?v=PQkJE-rtn-g
 * James Stout Blog about Gaze OCR and Talon: https://handsfreecoding.org/
   * Demo video Gaze OCR: https://www.youtube.com/watch?v=qkFy66WF3bU
+* Video by Wolfram Wingerath showing hands-free coding and gaming techniques: https://www.youtube.com/watch?v=HtoJ7PyjsSY
 
